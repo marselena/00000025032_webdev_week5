@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="application/vnd.wap.xhtml+xml; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Cara menampilkan isi value input dengan javascript - VeriAsha </title>
+
+<script>
+
+function pembuatan(){
+var txt;
+
+var input = document.getElementById('input');
+var input2 = document.getElementById('input2');
+var hasil = document.getElementById('hasil');
+var hasil2 = document.getElementById('hasil2');
+
+hasil.innerHTML  += input.value ;  
+hasil2.innerHTML += input2.value ; 
+}
+
+function delete()
+{
+	document.getElementById("hasil").innerHTML =" ";
+	document.getElementById("hasil2s").innerHTML =" ";
+}
+</script>
+</head>
+
+<style>
+	.utama{
+		background: grey;
+		height: 200px;
+		padding-left: 20px;
+	}
+
+	.text1{
+		width: 90%;
+	}
+
+	.text2{
+		width: 90%;
+		height: 70px;
+	}
+	#hasil{
+		text-decoration: underline;
+	}
+	.border{
+		border-style: dotted;
+	}
+
+</style>
+
+<body>
+
+<h1> Chat Board </h1>
+	<div class="utama">
+<form>
+	<div> Nama : </div> 
+<input class="text1" id="input" type="text"/> 
+
+	<div> Chat : </div>
+	<div>
+
+<input class="text2" id="input2" type="text"/><br/> </div>
+<input onclick="proses()" type="button" value="SEND"/>
+</div>
+</form>
+<input onclick="hapus()" type="button" value="CANCEL!"/>
+<div class="border">
+<div id="hasil"></div>
+<div id="hasil2"> </div>
+</div>
+</body>
+</html>
